@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "baguchan.littlemaid_api.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "refmap": "littlemaid_api.refmap.json",
+  "mixins": [
+    "MultiModelMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
