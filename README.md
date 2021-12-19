@@ -5,9 +5,9 @@ This mod is expansion little maid animation
 このmodはリトルメイドのアニメーションを拡張するmodです
 このmodにはバニラのアニメーションも一部新しく実装されてます
 
-This mod need to LittleMaidReBirth for run!
+This mod need to LittleMaidModelLoader for run!
 
-前提modとしてシストラ―氏が作ったLittleMaidReBirthが必要になります
+前提modとしてシストラ―氏が作ったLittleMaidModelLoaderが必要になります
 https://forum.civa.jp/viewtopic.php?f=3&t=119
 
 
