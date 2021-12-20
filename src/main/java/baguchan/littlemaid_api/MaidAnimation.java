@@ -105,12 +105,12 @@ public class MaidAnimation {
 				break;
 			case EAT, DRINK:
 				bipedRightArm.rotateAngleX = -1.5F;
-				bipedRightArm.rotateAngleY = -0.4F;
-				bipedRightArm.rotateAngleZ = 0.0F;
+				bipedRightArm.rotateAngleY = 0.0F;
+				bipedRightArm.rotateAngleZ = -0.4F;
 				if (subRightArm != null) {
 					subRightArm.rotateAngleX = 0.0F;
-					subRightArm.rotateAngleY = 1.6F;
-					subRightArm.rotateAngleZ = 0.0F;
+					subRightArm.rotateAngleY = 0.0F;
+					subRightArm.rotateAngleZ = 1.6F;
 				}
 				break;
 			case SPEAR:
@@ -155,12 +155,12 @@ public class MaidAnimation {
 				break;
 			case EAT, DRINK:
 				bipedLeftArm.rotateAngleX = -1.5F;
-				bipedLeftArm.rotateAngleY = 0.4F;
-				bipedLeftArm.rotateAngleZ = 0.0F;
+				bipedLeftArm.rotateAngleY = 0.0F;
+				bipedLeftArm.rotateAngleZ = 0.4F;
 				if (subLeftArm != null) {
 					subLeftArm.rotateAngleX = 0.0F;
-					subLeftArm.rotateAngleY = -1.6F;
-					subLeftArm.rotateAngleZ = 0.0F;
+					subLeftArm.rotateAngleY = 0.0F;
+					subLeftArm.rotateAngleZ = -1.6F;
 				}
 				break;
 			case SPEAR:
