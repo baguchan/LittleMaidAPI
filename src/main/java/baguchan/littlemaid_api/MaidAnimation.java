@@ -103,15 +103,24 @@ public class MaidAnimation {
 				bipedRightArm.rotateAngleX = bipedRightArm.rotateAngleX * 0.5F - 0.9424779F;
 				bipedRightArm.rotateAngleY = (-(float) Math.PI / 6.5F);
 				break;
-			case DRINK:
-				bipedRightArm.rotateAngleX = bipedRightArm.rotateAngleX * 0.5F - ((float) Math.PI / 10F);
-				bipedRightArm.rotateAngleY = 0.0F;
+			case EAT, DRINK:
+				bipedRightArm.rotateAngleX = -1.5F;
+				bipedRightArm.rotateAngleY = -0.4F;
+				bipedRightArm.rotateAngleZ = 0.0F;
+				if (subRightArm != null) {
+					subRightArm.rotateAngleX = 0.0F;
+					subRightArm.rotateAngleY = 1.6F;
+					subRightArm.rotateAngleZ = 0.0F;
+				}
 				break;
 			case SPEAR:
 				bipedRightArm.rotateAngleX = bipedRightArm.rotateAngleX * 0.5F - (float) Math.PI;
 				bipedRightArm.rotateAngleY = 0.0F;
+				bipedRightArm.rotateAngleZ = 0.0F;
 				if (subRightArm != null) {
 					subRightArm.rotateAngleX = -0.5F;
+					subRightArm.rotateAngleY = 0.0F;
+					subRightArm.rotateAngleZ = 0.0F;
 				}
 				break;
 			case CROSSBOW:
@@ -144,16 +153,25 @@ public class MaidAnimation {
 				bipedLeftArm.rotateAngleX = bipedLeftArm.rotateAngleX * 0.5F - 0.9424779F;
 				bipedLeftArm.rotateAngleY = ((float) Math.PI / 6.5F);
 				break;
-			case EAT:
-				bipedLeftArm.rotateAngleX = bipedLeftArm.rotateAngleX * 0.5F - ((float) Math.PI / 10F);
-				bipedLeftArm.rotateAngleY = 0.0F;
+			case EAT, DRINK:
+				bipedLeftArm.rotateAngleX = -1.5F;
+				bipedLeftArm.rotateAngleY = 0.4F;
+				bipedLeftArm.rotateAngleZ = 0.0F;
+				if (subLeftArm != null) {
+					subLeftArm.rotateAngleX = 0.0F;
+					subLeftArm.rotateAngleY = -1.6F;
+					subLeftArm.rotateAngleZ = 0.0F;
+				}
 				break;
 			case SPEAR:
 				bipedLeftArm.rotateAngleX = bipedLeftArm.rotateAngleX * 0.5F - (float) Math.PI;
 				bipedLeftArm.rotateAngleY = 0.0F;
+				bipedLeftArm.rotateAngleZ = 0.0F;
 
 				if (subLeftArm != null) {
 					subLeftArm.rotateAngleX = -0.5F;
+					subLeftArm.rotateAngleY = 0.0F;
+					subLeftArm.rotateAngleZ = 0.0F;
 				}
 
 				break;
