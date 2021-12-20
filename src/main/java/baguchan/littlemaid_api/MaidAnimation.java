@@ -23,6 +23,13 @@ public class MaidAnimation {
 		ModelRenderer bipedRightLeg = MaidAnimationUtils.getRightLeg(model);
 		ModelRenderer bipedLeftLeg = MaidAnimationUtils.getLeftLeg(model);
 
+		ModelRenderer subRightArm = MaidAnimationUtils.getSubRightArm(model);
+		ModelRenderer subLeftArm = MaidAnimationUtils.getSubLeftArm(model);
+
+		ModelRenderer subRightLeg = MaidAnimationUtils.getSubRightLeg(model);
+		ModelRenderer subLeftLeg = MaidAnimationUtils.getSubLeftLeg(model);
+
+
 		if (swimAmount > 0.0F) {
 			model.bipedHead.rotateAngleX = 0.0F;
 			float angle = ModelCapsHelper.getCapsValueFloat(event.getModel(), 336, new Object[]{particalTick});
@@ -37,6 +44,13 @@ public class MaidAnimation {
 			bipedLeftArm.setRotateAngle(0.0F, 0.0F, 0.0F);
 			bipedRightLeg.setRotateAngle(0.0F, 0.0F, 0.0F);
 			bipedLeftLeg.setRotateAngle(0.0F, 0.0F, 0.0F);
+
+			if (subRightArm != null && subLeftArm != null && subRightLeg != null && subLeftLeg != null) {
+				subRightArm.setRotateAngle(0.0F, 0.0F, 0.0F);
+				subLeftArm.setRotateAngle(0.0F, 0.0F, 0.0F);
+				subRightLeg.setRotateAngle(0.0F, 0.0F, 0.0F);
+				subLeftLeg.setRotateAngle(0.0F, 0.0F, 0.0F);
+			}
 
 
 			if (!event.getEntity().isUsingItem()) {
