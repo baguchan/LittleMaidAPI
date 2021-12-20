@@ -49,9 +49,15 @@ This api mod expansion maid animation!
     side="BOTH"
 # Here's another dependency
 [[dependencies.littlemaid_api]]
-    modId="minecraft"
-    mandatory=true
+modId = "minecraft"
+mandatory = true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.18.1,1.19)"
-    ordering="NONE"
-    side="BOTH"
+versionRange = "[1.18.1,1.19)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.littlemaid_api]]
+modId = "littlemaidmodelloader"
+mandatory = true
+versionRange = "[2.0.0,)"
+ordering = "NONE"
+side = "BOTH"
