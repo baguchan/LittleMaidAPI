@@ -14,7 +14,7 @@ import static net.sistr.littlemaidmodelloader.maidmodel.IModelCaps.caps_Entity;
 
 @Mixin(ModelMultiBase.class)
 public abstract class ModelMultiBaseMixin extends ModelBase {
-	@Shadow
+	@Shadow(remap = false)
 	public abstract Object getCapsValue(int pIndex, Object... pArg);
 
 	@Inject(at = @At("TAIL"), method = "setAngles", remap = false)
