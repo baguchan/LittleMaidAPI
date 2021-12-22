@@ -4,8 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
   "refmap": "littlemaid_api.refmap.json",
-  "mixins": [
-    "MultiModelMixin"
+  "client": [
+    "ModelMultiBaseMixin"
   ],
   "injectors": {
     "defaultRequire": 1

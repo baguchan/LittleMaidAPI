@@ -116,6 +116,12 @@ public class MaidAnimation {
 			case BLOCK:
 				bipedRightArm.rotateAngleX = bipedRightArm.rotateAngleX * 0.5F - 0.9424779F;
 				bipedRightArm.rotateAngleY = (-(float) Math.PI / 6.5F);
+				bipedRightArm.rotateAngleZ = 0.0F;
+				if (subRightArm != null) {
+					subRightArm.rotateAngleX = -0.5F;
+					subRightArm.rotateAngleY = 0.0F;
+					subRightArm.rotateAngleZ = 0.0F;
+				}
 				break;
 			case EAT, DRINK:
 				bipedRightArm.rotateAngleX = -1.8F;
@@ -138,7 +144,7 @@ public class MaidAnimation {
 				}
 				break;
 			case CROSSBOW:
-				MaidAnimationUtils.animateCrossbowCharge(bipedRightArm, bipedLeftArm, living, true);
+				MaidAnimationUtils.animateCrossbowCharge(bipedRightArm, bipedLeftArm, living, true, subRightArm != null);
 				break;
 			case SPYGLASS:
 				bipedRightArm.rotateAngleX = Mth.clamp(model.bipedHead.rotateAngleX - 1.9198622F - (living.isCrouching() ? 0.2617994F : 0.0F), -2.4F, 3.3F);
@@ -166,6 +172,12 @@ public class MaidAnimation {
 			case BLOCK:
 				bipedLeftArm.rotateAngleX = bipedLeftArm.rotateAngleX * 0.5F - 0.9424779F;
 				bipedLeftArm.rotateAngleY = ((float) Math.PI / 6.5F);
+				bipedLeftArm.rotateAngleZ = 0.0F;
+				if (subLeftArm != null) {
+					subLeftArm.rotateAngleX = -0.5F;
+					subLeftArm.rotateAngleY = 0.0F;
+					subLeftArm.rotateAngleZ = 0.0F;
+				}
 				break;
 			case EAT, DRINK:
 				bipedLeftArm.rotateAngleX = -1.8F;
@@ -190,7 +202,7 @@ public class MaidAnimation {
 
 				break;
 			case CROSSBOW:
-				MaidAnimationUtils.animateCrossbowCharge(bipedLeftArm, bipedRightArm, living, true);
+				MaidAnimationUtils.animateCrossbowCharge(bipedLeftArm, bipedRightArm, living, false, subRightArm != null);
 				break;
 			case SPYGLASS:
 				bipedLeftArm.rotateAngleX = Mth.clamp(model.bipedHead.rotateAngleX - 1.9198622F - (living.isCrouching() ? 0.2617994F : 0.0F), -2.4F, 3.3F);

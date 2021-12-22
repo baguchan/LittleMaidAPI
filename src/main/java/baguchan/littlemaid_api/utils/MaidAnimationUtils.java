@@ -98,16 +98,18 @@ public class MaidAnimationUtils {
 	}
 
 
-	public static void animateCrossbowCharge(ModelRenderer mainHand, ModelRenderer subHand, LivingEntity living, boolean right) {
+	public static void animateCrossbowCharge(ModelRenderer mainHand, ModelRenderer subHand, LivingEntity living, boolean right, boolean isSlim) {
 		ModelRenderer modelpart = right ? mainHand : subHand;
 		ModelRenderer modelpart1 = right ? subHand : mainHand;
 		modelpart.rotateAngleY = right ? -0.8F : 0.8F;
 		modelpart.rotateAngleX = -0.97079635F;
 		modelpart1.rotateAngleX = modelpart.rotateAngleX;
+		modelpart.rotateAngleZ = 0.0F;
+		modelpart1.rotateAngleZ = 0.0F;
 		float f = (float) CrossbowItem.getChargeDuration(living.getUseItem());
 		float f1 = Mth.clamp((float) living.getTicksUsingItem(), 0.0F, f);
 		float f2 = f1 / f;
-		modelpart1.rotateAngleY = Mth.lerp(f2, 0.4F, 0.85F) * (float) (right ? 1 : -1);
-		modelpart1.rotateAngleX = Mth.lerp(f2, modelpart1.rotateAngleX, (-(float) Math.PI / 2F));
+		modelpart1.rotateAngleY = Mth.lerp(f2, 0.4F, 0.85F) * (float) (right ? 1 : -1) * (isSlim ? 0.5F : 1F);
+		modelpart1.rotateAngleX = Mth.lerp(f2, modelpart1.rotateAngleX, (-(float) Math.PI / 2F)) * (isSlim ? 0.5F : 1F);
 	}
 }
